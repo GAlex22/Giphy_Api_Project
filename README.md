@@ -2,13 +2,13 @@
 
 ### Install instructions
 
-1.Install a virtual enviroment and activate it
+1.Install a virtual enviroment and activate it;
 
-2.Install requirements
+2.Install requirements;
 ```sh
 pip install requirements.txt
 ```
-3.Run server 
+3.Run server;
 ```sh
 python manage.py runserver
 ```

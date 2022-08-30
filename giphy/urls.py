@@ -19,6 +19,5 @@ from base import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('api.urls')),
-   
+    path("search/", include("base.urls")),  
 ]

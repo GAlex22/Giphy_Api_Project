@@ -5,6 +5,7 @@ from urllib import parse, request
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Search
+
 # Create your views here.
 
 url = "http://api.giphy.com/v1/gifs/search"
@@ -28,7 +29,11 @@ def SearchGif(request,query):
     response = requests.get(url, params=params)
     json_data = json.loads(response.text) 
     Search.objects.create(search_term=query, response=func(json_data))
-    print(Search.objects.all())
-    #print(Search.objects.all().values())
+   
     return Response(func(json_data))    
+
+@api_view(['GET'])
+def getData(request):
+    return Response(Search.objects.all().values())
+
 

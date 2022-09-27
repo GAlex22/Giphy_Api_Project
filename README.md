@@ -2,7 +2,7 @@
 
 ### Install instructions
 
-1.Install a virtual enviroment and activate it;
+1.Make a virtual enviroment and activate it;
 
 2.Install requirements;
 ```sh
